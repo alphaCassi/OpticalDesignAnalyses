@@ -8,7 +8,7 @@ def process_txt(file_path, D, Fn, wavelengths):
     The function to process txt file of the rms wavefront error data.
     The encoding should be utf-8.
     The first column of the data is field points in mm. The second column is polychromatic errors.
-    All other columns are errors for different wavelength.
+    All other columns are errors for different wavelengths.
 
     Parameters:
     file_path: file path and name. Format: txt.

@@ -326,7 +326,7 @@ def interaction_matrix(initial_coord, Rg, Rh, z, r):
     h_x = z* np.tan(x/206265)
     h_y = z* np.tan(y/206265)
     h = np.sqrt(h_x**2 + h_y**2)
-    alpha = np.arctan(h_y/h_x)
+    alpha = np.arctan2(h_y, h_x)
     # print(h)
     # print(alpha)
     tt = r/Rg #tt coefficient

@@ -31,12 +31,12 @@ if __name__ == "__main__":
 
     path = " "    #set your path
     #calling functions
-    stars = NGS_asterisms(N_ast, n_stars, write = False)
+    # stars = NGS_asterisms(N_ast, n_stars, write = False)
     # print(stars[0])
     #plot_asterisms(stars, N_ast)
     # plt.show()
-    # stars = NGS_asterisms_increaseRad(N_ast, n_stars, image = False, write = False)
-    # print(stars[0])
+    stars = NGS_asterisms_increaseRad(N_ast, n_stars, image = False, write = False)
+    print(stars[0])
     # print(stars.shape)
     # plt.show()
 
@@ -44,15 +44,15 @@ if __name__ == "__main__":
     # input_dist_ngs_rad, input_dist_pfr_rad = process_distortion(path, stars[:], rot_arr, wavenumber, hole_position_std, pin_pitch)
 
     #load distortions
-    dist_ngs = np.load(path+"input_dist_ngs.npy")
+    dist_ngs = np.load(path+"input_dist_ngs_rad_60.npy")
 
     #for the first test. Differences are calculated inside the TT_signal()
-    for i in range(4):
-        print(f'stars coordinates:\n {stars[i]}')
-        TT_ngs = TT_signal(stars[i], rot_arr, r, dist_ngs[:, i, :, :], None)
-        print(f'TT:\n {TT_ngs}')
+    # for i in range(4):
+    #     print(f'stars coordinates:\n {stars[i]}')
+    #     TT_ngs = TT_signal(stars[i], rot_arr, r, dist_ngs[:, i, :, :], None)
+    #     print(f'TT:\n {TT_ngs}')
     # # print(TT_ngs.shape)
 
     # for the second test
-    # cv = [command_vector(stars[0], rot_arr, i, Rg, Rh, z, r, dist_ngs[:, 0, :, :], None) for i in range(len(rot_arr))]
-    # print(f'CV: \n {np.array(cv).squeeze()}')
+    cv = [command_vector(stars[0], rot_arr, i, Rg, Rh, z, r, dist_ngs[:, 0, :, :], None) for i in range(len(rot_arr))]
+    print(f'CV: \n {np.array(cv).squeeze()}')

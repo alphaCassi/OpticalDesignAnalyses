@@ -13,4 +13,6 @@ Currently, the repository hosts scripts for two key aspects of optical design an
 - Zernike Polynomials Calculation for Elliptical Aperture (NEW VERSION IN ao_tools package): Another script is dedicated to calculating Zernike polynomials for an elliptical aperture. Zernike polynomials are widely used in optical design for representing aberrations, and their calculation for non-circular apertures like ellipses is particularly valuable for many practical applications.
 We are actively working on developing new features and expanding the capabilities of this repository. Your feedback, contributions, and suggestions are highly encouraged as we continue to grow and improve this project.
 
+- Generation of the PSF with a standalone application with Zemax: the scripts requires a path to and a filename of the Zemax file with the system to generate the Huygens PSF.
+
 Thank you for your interest in Optical Design Analyses. We look forward to building a comprehensive suite of tools to support your optical design endeavors.
